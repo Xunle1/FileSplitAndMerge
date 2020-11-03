@@ -7,7 +7,7 @@ public class FileSplit implements Runnable{
     private String name;
     private RandomAccessFile raf;
     private static long seek = 0;
-    private static ArrayList<String> list = new ArrayList<>();
+    //private static ArrayList<String> list = new ArrayList<>();
 
 
 
@@ -36,8 +36,8 @@ public class FileSplit implements Runnable{
                             seek += line.length() + 2L;
                             System.out.println(name + " seek = " + seek);
                             raf.seek(seek);
-                            System.out.println(name + ":" + line);
-                            list.add(name + ":" + seek + "--" + line);
+//                            System.out.println(name + ":" + line);
+//                            list.add(name + ":" + seek + "--" + line);
                             pw.println(name + ":" + "--" + line);
                             pw.flush();
                         } else {
@@ -57,7 +57,7 @@ public class FileSplit implements Runnable{
         return name;
     }
 
-    public static ArrayList<String> getList() {
-        return list;
-    }
+//    public static ArrayList<String> getList() {
+//        return list;
+//    }
 }

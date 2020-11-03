@@ -29,8 +29,8 @@ public class Main {
             t1.join();
             t2.join();
             t3.join();
-            ArrayList<String> list = FileSplit.getList();
-            System.out.println(list);
+        //    ArrayList<String> list = FileSplit.getList();
+        //    System.out.println(list);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
